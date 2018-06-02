@@ -7,8 +7,8 @@ def set_end_url_upd():
 def create_session_form():
     return Common.create_oauth1_session("TWITTER")
 
-def tweet_post(sesseion, text, end_url):
-    if not isinstance(sesseion, OAuth1Session):
+def tweet_post(session, text, end_url):
+    if not isinstance(session, OAuth1Session):
         raise
 
     if not text:
